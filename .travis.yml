@@ -1,0 +1,26 @@
+sudo: false
+language: python
+python:
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5-dev"
+  - "pypy"
+  - "pypy3"
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+  - pip install twine
+script: coverage run --source=commons setup.py test
+after_success: coveralls
+deploy:
+  provider: pypi
+  user: joamag
+  password:
+    secure: R0lZowasZnMbsiG+dmLEcLrGFF3AcYTl/PFyJ8AFLzgP3XKjor0/yANNhi3znjOTwZZmEa+AQJcEuPU3EbT6Kn0pO9/iT+dvvqLCix0SL8sUHFQYYjqx7+TA7HG0Utudqa2d5KAOU66j57uZC9dZ+74+rCIoaybPz6H8l4A0gOsAErftYR8mFB4B9Wsa6OlKysjEzZUQZgUhA+uE2UXY0Oz6fAdHdRAP/kqZvLomiw5i/ZkDBApDrfNPDItqdCMEhOl2AOeeqnwwT6PCmMpbxNx08PfgEL28di+ykZP8xMVFeibkheg7qrZGZ4IFylYdUYsIcjw9Nhyss+3hfNZVMD7JiE6IUTT7y3A4uf/Kyjdnmc+8Cz71kuYNXXbBX6GNIeGdbBh1Bo8SrsQEc/CaxNxEVzB9oivAy/j71JCmPivEmFHPGpe422YWkwhodktH2Q/t3o3zE/feF1zTtCEj/k/TICINvQg4aYWbIGB9cFxqPqmAtnxukaqPQE8cls2LlqWVPeIpaMV+MuJHT+9+N2zXjK7dk7MBdOXOf8o6S5axtOJPvs+g69lLic5WBIkPgCo0SLKLXywO1FU6hyvf/5HESNdRk5X+y5itMniEe3sGdDVu84s2hw1jVi1MPaFrliwmue+IGkMpiZ4sgdI6BESi3qwHAJH6ATfKnvIfju4=
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    python: "2.7"
