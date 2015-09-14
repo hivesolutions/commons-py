@@ -1,0 +1,8 @@
+*.pyc
+*.debug
+
+redis.shelve*
+
+/dist
+/build
+/src/commons_py.egg-info
