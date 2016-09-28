@@ -6,7 +6,7 @@ import setuptools
 
 setuptools.setup(
     name = "commons_py",
-    version = "0.2.0",
+    version = "0.2.1",
     author = "Hive Solutions Lda.",
     author_email = "development@hive.pt",
     description = "Commons Python",
