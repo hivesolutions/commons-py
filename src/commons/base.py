@@ -12,14 +12,14 @@ def floor(value, places):
     with the floor operation with a variable number of
     decimal places instead of a plain integer.
 
-    @type value: float
-    @param value: The value fo which the floor value is
+    :type value: float
+    :param value: The value fo which the floor value is
     going to be calculated.
-    @type places: int
-    @param places: The number of decimal places that are
+    :type places: int
+    :param places: The number of decimal places that are
     going to be used in the floor operation.
-    @rtype: float
-    @return: The floating point number representing the
+    :rtype: float
+    :return: The floating point number representing the
     floor version of the provided value, according to the
     requested number of places.
     """
@@ -38,14 +38,14 @@ def ceil(value, places):
     with the ceil operation with a variable number of
     decimal places instead of a plain integer.
 
-    @type value: float
-    @param value: The value fo which the ceil value is
+    :type value: float
+    :param value: The value fo which the ceil value is
     going to be calculated.
-    @type places: int
-    @param places: The number of decimal places that are
+    :type places: int
+    :param places: The number of decimal places that are
     going to be used in the ceil operation.
-    @rtype: float
-    @return: The floating point number representing the
+    :rtype: float
+    :return: The floating point number representing the
     ceil version of the provided value, according to the
     requested number of places.
     """
