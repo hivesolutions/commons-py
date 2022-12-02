@@ -5,14 +5,14 @@ import os
 import setuptools
 
 setuptools.setup(
-    name = "commons_py",
+    name = "commons-py",
     version = "0.2.1",
     author = "Hive Solutions Lda.",
     author_email = "development@hive.pt",
     description = "Commons Python",
     license = "Apache License, Version 2.0",
     keywords = "commons framework utilities",
-    url = "http://commons_py.hive.pt",
+    url = "http://commons-py.hive.pt",
     packages = [
         "commons"
     ],
@@ -36,5 +36,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7"
-    ]
+    ],
+    long_description = open(os.path.join(os.path.dirname(__file__), "README.md"), "r").read(),
+    long_description_content_type = "text/markdown"
 )
