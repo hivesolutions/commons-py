@@ -5,4 +5,4 @@ redis.shelve*
 
 /dist
 /build
-/src/commons-py.egg-info
+/src/commons_py.egg-info
