@@ -7,6 +7,7 @@ FLOAT_PRECISION = 14
 """ The amount of precision (in decimal places) that
 is going to be used for the decimal internal usage """
 
+
 class Decimal(float):
     """
     Fixed point rational number representation/manipulation
@@ -22,7 +23,7 @@ class Decimal(float):
     task that are considered performance intensive.
     """
 
-    def __new__(self, value = 0.0):
+    def __new__(self, value=0.0):
         value = float(value)
         integer = abs(int(value // 1))
         count = 1 if integer == 0 else int(math.log10(integer)) + 1
@@ -36,8 +37,10 @@ class Decimal(float):
 
     def __cmp__(self, other):
         other = self._normalize(other)
-        if float.__gt__(self, other): return 1
-        if float.__lt__(self, other): return -1
+        if float.__gt__(self, other):
+            return 1
+        if float.__lt__(self, other):
+            return -1
         return 0
 
     def __lt__(self, other):
@@ -160,7 +163,7 @@ class Decimal(float):
         result = float.__invert__(self)
         return Decimal(result)
 
-    def __round__(self, n = 0):
+    def __round__(self, n=0):
         result = float.__round__(self, n)
         return Decimal(result)
 
@@ -177,5 +180,6 @@ class Decimal(float):
         return Decimal(result)
 
     def _normalize(self, value):
-        if not type(value) == float: return value
+        if not type(value) == float:
+            return value
         return round(value, self.places)

@@ -3,6 +3,7 @@
 
 import math
 
+
 def floor(value, places):
     """
     Rounds the provided value to the upper most value
@@ -28,6 +29,7 @@ def floor(value, places):
     value = value * multiplier
     value = math.floor(value)
     return value / multiplier
+
 
 def ceil(value, places):
     """

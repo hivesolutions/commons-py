@@ -3,6 +3,8 @@
 
 redis.shelve*
 
+/.venv
+
 /dist
 /build
 /src/commons_py.egg-info
